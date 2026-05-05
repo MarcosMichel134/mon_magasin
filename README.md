@@ -33,3 +33,28 @@ Application PHP de gestion de magasin avec gestion des articles, ventes et clien
 ```bash
 git clone https://github.com/VOTRE-COMPTE/mon-magasin.git
 cd mon-magasin
+
+
+mon-magasin/
+├── config/
+│   ├── db.php              
+│   └── db.example.php      (exemple à copier)
+├── views/
+│   ├── login.php
+│   ├── inscription.php
+│   ├── accueil.php
+│   ├── articles/
+│   │   └── liste.php
+│   ├── ventes/
+│   │   ├── liste.php
+│   │   └── effectuer.php
+│   ├── clients/
+│   │   └── liste.php
+│   └── utilisateurs/
+│       └── liste.php
+├── public/
+│   └── index.php           (routeur principal)
+├── sql/
+│   └── database.sql
+├── .htaccess
+└── .gitignore
