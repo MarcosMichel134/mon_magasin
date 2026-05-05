@@ -1,0 +1,23 @@
+# .htaccess (à la racine du projet, pas dans /public)
+
+RewriteEngine On
+
+# Empêcher l'accès aux dossiers sensibles
+RewriteRule ^(config|models|controllers|views)/ - [F,L]
+
+# Réécriture des URLs (si fichier/dossier n'existe pas)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Exemples d'URLs propres
+RewriteRule ^connexion$ public/index.php?action=login [L]
+RewriteRule ^inscription$ public/index.php?action=inscription [L]
+RewriteRule ^accueil$ public/index.php?action=accueil [L]
+RewriteRule ^articles$ public/index.php?action=articles [L]
+RewriteRule ^ventes$ public/index.php?action=ventes [L]
+RewriteRule ^effectuer-vente$ public/index.php?action=effectuer_vente [L]
+RewriteRule ^clients$ public/index.php?action=clients [L]
+RewriteRule ^deconnexion$ public/index.php?action=deconnexion [L]
+
+# Rediriger racine vers connexion
+RewriteRule ^$ public/index.php?action=login [L]
