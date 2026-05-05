@@ -1,0 +1,47 @@
+# .gitignore - Fichiers à exclure de GitHub
+
+# Configuration (mots de passe)
+/config/db.php
+
+# Logs
+*.log
+*.error_log
+
+# OS fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environnement
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Cache
+.cache/
+*.tmp
+*.temp
+
+# Backup
+*.bak
+*.old
+*.swp
+
+# Composer
+/vendor/
+composer.lock
+
+# Node modules (si jamais)
+node_modules/
+
+# Fichiers ZIP
+*.zip
+*.tar.gz
+
+# Base de données exportée (sauf si intentionnel)
+*.sql
+!/sql/database.sql
